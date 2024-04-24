@@ -1,0 +1,159 @@
+:root {
+    --boxWidth: 275px;
+    --boxHeight: 450px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(238,174,202);
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+div#credentials {
+    position: absolute;
+    width: var(--boxWidth);
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    left: 50%;
+    top: 50%;
+    translate: calc(var(--boxWidth)/-2) calc(var(--boxHeight)/-2);
+    box-shadow: 6px 6px 15px ;
+    text-align: center;
+    color: rgb(25, 72, 126);
+    padding: 14px 0;
+    transition: 1s linear;
+}
+
+div#chat-box {
+    display: none;
+    position: absolute;
+    width: var(--boxWidth);
+    height: var(--boxHeight);
+    background-color: white;
+    border-radius: 10px;
+    left: 50%;
+    top: 50%;
+    translate: calc(var(--boxWidth)/-2) calc(var(--boxHeight)/-2);
+    box-shadow: 6px 6px 15px ;
+    transition: 1s ease-in-out;
+    padding: 1px;
+}
+
+div#chat-head {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(39, 161, 96);
+    text-align: left;
+    border-bottom: 1px solid rgba(148,187,233,.65);
+    font-size: 14px;
+    padding: 10px;   
+}
+
+div#user-counter {
+    float: right;
+}
+
+div#chat-content {
+    height: 80%;
+    max-height: 80%;
+    border-bottom: 1px solid rgba(148,187,233,.65);
+    margin: 5px 0;
+}
+
+div#chat-messages {
+    max-height: 100%;
+    overflow: auto;
+    scrollbar-width: none;
+    padding: 0 12px;
+}
+
+#chat-messages p {
+    text-align: right;
+    margin: 8px 0;
+    padding: 5px;
+    position: relative;
+}
+
+#chat-messages p.received-msg {
+    text-align: left;
+    margin: 8px 0;
+    padding: 5px;
+}
+
+span.name {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    color: black;
+    background-color: white;
+    font-size: 11px;
+    top: -12px;
+    padding: 0;
+    margin: 0;
+    z-index: -1;
+}
+
+p.received-msg span.other-user {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    color: black !important;
+    background-color: white !important;
+    font-size: 11px;
+    top: -12px;
+    left: -11px;
+    padding: 0;
+    margin: 0;
+    z-index: -1;
+}
+
+p span {
+    color: aliceblue;
+    border-radius: 5px;
+    background-color: #008CBA;
+    text-align: right;
+    padding: 6px 12px;
+}
+
+p.received-msg span {
+    color: aliceblue;
+    border-radius: 5px;
+    background-color: #ca308a;
+    text-align: left;
+    padding: 6px 12px;
+}
+
+
+div#chat-foot {
+    margin-top: 6px;
+}
+
+input[type=text] {
+    padding: 5px 15px;
+    margin: 5px;
+    box-sizing: border-box;
+    border: 1px solid rgb(216, 114, 158);;
+    border-radius: 3px;
+    -webkit-transition: 0.5s;
+    transition: 0.25s;
+    outline: none;
+    width: 75%;
+    height: auto;
+}
+
+input[type=text]:focus {
+    border: 2px solid rgb(216, 114, 158);
+    padding: 5px 16px;
+}
+
+button {
+    color: aliceblue;
+    background-color: #008CBA;
+    text-decoration: none;
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+}
